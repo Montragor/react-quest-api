@@ -8,9 +8,9 @@ app = FastAPI(title="React Quest API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_ORIGIN]
+    allow_origins=[FRONTEND_ORIGIN],
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["*"]
 )
 
 app.include_router(lessons.router)
